@@ -1,11 +1,21 @@
-My sort has worked 147601 nano seconds.
-My sort has worked 131899 nano seconds.
-My sort has worked 165699 nano seconds.
-My sort has worked 172600 nano seconds.
-My sort has worked 140699 nano seconds.
+My sort has worked 65 milliseconds.
+My sort has worked 153 milliseconds.
+My sort has worked 95 milliseconds.
+My sort has worked 112 milliseconds.
+My sort has worked 97 milliseconds.
+My sort has worked 89 milliseconds.
+My sort has worked 84 milliseconds.
+My sort has worked 107 milliseconds.
+My sort has worked 99 milliseconds.
+My sort has worked 125 milliseconds.
 
-Java sort has worked 466900 nano seconds.
-Java sort has worked 560501 nano seconds.
-Java sort has worked 510300 nano seconds.
-Java sort has worked 609000 nano seconds.
-Java sort has worked 542401 nano seconds.
+Java sort has worked 106 milliseconds.
+Java sort has worked 103 milliseconds.
+Java sort has worked 100 milliseconds.
+Java sort has worked 86 milliseconds.
+Java sort has worked 103 milliseconds.
+Java sort has worked 97 milliseconds.
+Java sort has worked 82 milliseconds.
+Java sort has worked 95 milliseconds.
+Java sort has worked 125 milliseconds.
+Java sort has worked 102 milliseconds.

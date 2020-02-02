@@ -2,7 +2,6 @@ package Tests;
 
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -12,12 +11,24 @@ import java.util.*;
 public class MySort {
 
     public static void main(String[] args) {
-        int[] array = {5,11,6,13,1,3,15,9,8,4,12,7,14,2,10};
-        long l1 = System.nanoTime();
+        //int[] array = {5,11,6,13,1,3,15,9,8,4,12,7,14,2,10};
+        int capacity = 100_000;
+        List<Integer> list = new ArrayList<>(capacity);
+        for (int i = 0; i < capacity; i++) {
+            list.add(i);
+        }
+        Collections.shuffle(list);
+        int[] array = new int[capacity];
+        for (int i = 0; i < capacity; i++) {
+            array[i] = list.get(i);
+        }
+
+        long l1 = new Date().getTime();
         array = mysort(array);
-        long l2 = System.nanoTime();
+        long l2 = new Date().getTime();
+
         System.out.println(Arrays.toString(array));
-        String toLog = "My sort has worked " + (l2-l1) + " nano seconds.\n";
+        String toLog = "Java sort has worked " + (l2-l1) + " milliseconds.\n";
         try(FileOutputStream fileOutputStream = new FileOutputStream(new File("timeSorts.txt"),true)){
             fileOutputStream.write(toLog.getBytes());
         } catch (IOException e) {
@@ -46,14 +57,12 @@ public class MySort {
                 result[li + ri] = rightSide[ri];
                 ri++;
             }
-            if (li + ri == result.length) break;
             if (leftSide.length == li){
                 while (ri != rightSide.length){
                     result[li + ri] = rightSide[ri];
                     ri++;
                 }
             }
-            if (li + ri == result.length) break;
             if (rightSide.length == ri){
                 while (li != leftSide.length){
                     result[li + ri] = leftSide[li];
